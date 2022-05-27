@@ -37,6 +37,7 @@ LinkedList::LinkedList(const LinkedList &ll) {
 const LinkedList &LinkedList::operator=(const LinkedList &rhs) {
     return *this;
 }
+// https://github.com/csc2430-master/integer-linked-list
 
 bool LinkedList::Insert(int element, size_t position) {
     if (position > _size)
@@ -67,15 +68,15 @@ int LinkedList::Remove(size_t position) {
 }
 
 int LinkedList::Get(size_t position) const {
-    return 0;
+    return 0; // Wednesday
 }
 
 int LinkedList::IndexOf(int element) const {
-    return 0;
+    return 0; // Wednesday
 }
 
 void LinkedList::Clear() {
-
+ // Wednesday
 }
 
 bool LinkedList::IsEmpty() const {
