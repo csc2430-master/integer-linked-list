@@ -22,6 +22,7 @@ LinkedList::~LinkedList() {
         if (toDelete->next != nullptr){
             tmp = toDelete->next;
             delete toDelete;
+            toDelete = tmp;
         }else{
             delete toDelete;
             toDelete = nullptr;
@@ -48,7 +49,7 @@ bool LinkedList::Insert(int element, size_t position) {
         _head = neo;
     }else if (position == 0){
         neo->next = _head;
-        _head->next = neo;
+        _head = neo;
     }else{
         Node* tmp = _head;
         for (int i = 0; i < position - 1; ++i) {
