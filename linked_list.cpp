@@ -16,7 +16,17 @@ LinkedList::LinkedList() {
 }
 
 LinkedList::~LinkedList() {
-
+    Node* toDelete = _head;
+    Node* tmp = nullptr;
+    while (toDelete != nullptr){
+        if (toDelete->next != nullptr){
+            tmp = toDelete->next;
+            delete toDelete;
+        }else{
+            delete toDelete;
+            toDelete = nullptr;
+        }
+    }
 }
 
 LinkedList::LinkedList(const LinkedList &ll) {
