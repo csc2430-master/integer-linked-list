@@ -75,17 +75,22 @@ size_t LinkedList::Size() {
     return _size;
 }
 
-string LinkedList::ToJSON() const {
+string LinkedList::ToString() const {
     stringstream ss;
     ss << "<";
-    Node* tmp = _head;
-    for (int i = 0; i < _size; ++i) {
-        if (i != _size - 1)
+//    Node* tmp = _head;
+//    for (int i = 0; i < _size; ++i) {
+//        if (i != _size - 1)
+//            ss << tmp->data << ", ";
+//        else
+//            ss << tmp->data;
+//        tmp = tmp->next;
+//    }
+    for (Node* tmp = _head; tmp != nullptr; tmp = tmp->next)
+        if (tmp->next != nullptr)
             ss << tmp->data << ", ";
         else
             ss << tmp->data;
-        tmp = tmp->next;
-    }
     ss << ">";
     return ss.str();
 }

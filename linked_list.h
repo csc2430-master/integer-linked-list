@@ -29,7 +29,7 @@ public:
     void Clear();
     bool IsEmpty()const;
     size_t Size();
-    string ToJSON()const;
+    string ToString()const;
 };
 
 
