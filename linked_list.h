@@ -24,7 +24,7 @@ public:
     const LinkedList& operator=(const LinkedList& rhs);
     bool Insert(int element, size_t position);
     int Remove(size_t position);
-    int Get(size_t position)const;
+    int Get(size_t position, bool& error)const;
     int IndexOf(int element)const;
     void Clear();
     bool IsEmpty()const;
